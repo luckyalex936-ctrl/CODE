@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yankee Clippers | Premium Barbershop Salon & Spa - Gigiri, Nairobi</title>
+    <meta name="description" content="Premium barbershop salon and spa services in Gigiri Box Park, Nairobi. Professional cuts, salon treatments, and spa relaxation at United Nations Crescent.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            400: '#D4AF37',
+                            500: '#C5A028',
+                            600: '#B08D1E',
+                        },
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#1a1a1a',
+                            700: '#2a2a2a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .service-icon {
+            transition: transform 0.3s ease;
+        }
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(10, 10, 10, 0.9);
+        }
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        .clip-path-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center">
+                        <i data-lucide="scissors" class="text-dark-900 w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-serif text-2xl font-bold text-white tracking-wide">YANKEE CLIPPERS</h1>
+                        <p class="text-xs text-gold-400 tracking-widest uppercase">Barbershop Salon & Spa</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-gold-400 transition-colors text-sm uppercase tracking-wider">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-gold-400 transition-colors text-sm uppercase tracking-wider">About</a>
+                    <a href="#services" class="text-gray-300 hover:text-gold-400 transition-colors text-sm uppercase tracking-wider">Services</a>
+                    <a href="#gallery" class="text-gray-300 hover:text-gold-400 transition-colors text-sm uppercase tracking-wider">Gallery</a>
+                    <a href="#contact" class="bg-gold-500 text-dark-900 px-6 py-2 rounded-full font-semibold hover:bg-gold-400 transition-all transform hover:scale-105">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-t border-gray-700">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-400 hover:bg-dark-700 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-400 hover:bg-dark-700 rounded-md">About</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-400 hover:bg-dark-700 rounded-md">Services</a>
+                <a href="#gallery" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-400 hover:bg-dark-700 rounded-md">Gallery</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gold-400 hover:text-gold-300">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="images/about.jpg" alt="Barbershop atmosphere" class="w-full h-[500px] object-cover rounded-lg shadow-2xl">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <p class="text-gold-400 uppercase tracking-[0.3em] text-sm mb-4 animate-pulse">Welcome to Excellence</p>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+                YANKEE <span class="text-gold-400">CLIPPERS</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 font-light max-w-2xl mx-auto">
+                Premium Barbering, Salon & Spa Services in the heart of Gigiri
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="tel:0789645636" class="bg-gold-500 text-dark-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gold-400 transition-all transform hover:scale-105 flex items-center gap-2 gold-glow">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    Call: 0789 645 636
+                </a>
+                <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-dark-900 transition-all">
+                    Our Services
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-gold-400"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-gold-400"></div>
+                    <img src="http://static.photos/barber/800x600/123" alt="Barbershop atmosphere" class="w-full h-[500px] object-cover rounded-lg shadow-2xl">
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-gold-400"></div>
+                    
+                    <!-- Experience Badge -->
+                    <div class="absolute bottom-8 left-8 bg-gold-500 text-dark-900 p-6 rounded-lg shadow-xl">
+                        <p class="font-serif text-3xl font-bold">10+</p>
+                        <p class="text-sm font-semibold uppercase">Years Experience</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="text-gold-400 uppercase tracking-widest text-sm mb-2">About Us</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">The Art of Grooming & Wellness</h2>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        Located in the prestigious Gigiri Box Park at United Nations Crescent, Yankee Clippers represents the pinnacle of men's grooming and wellness in Nairobi. We blend traditional barbering techniques with modern luxury spa treatments.
+                    </p>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Our team of expert barbers and therapists are dedicated to providing you with an exceptional experience, whether you're preparing for a diplomatic meeting at the UN or simply treating yourself to premium self-care.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-gold-400 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Expert Barbers</h4>
+                                <p class="text-sm text-gray-400">Internationally trained staff</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-gold-400 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Premium Products</h4>
+                                <p class="text-sm text-gray-400">Luxury grooming brands</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-gold-400 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Relaxing Atmosphere</h4>
+                                <p class="text-sm text-gray-400">Upscale Box Park location</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-gold-400 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Full Service</h4>
+                                <p class="text-sm text-gray-400">Barber, Salon & Spa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark-900 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212, 175, 55, 0.1) 35px, rgba(212, 175, 55, 0.1) 70px);"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <p class="text-gold-400 uppercase tracking-widest text-sm mb-2">What We Offer</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white">Our Premium Services</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Barber Services -->
+                <div class="service-card bg-dark-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500 transition-all duration-300 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="http://static.photos/barber/640x480/88" alt="Barber Services" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="service-icon w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mb-6 -mt-16 relative z-10 border-4 border-dark-800">
+                            <i data-lucide="scissors" class="w-8 h-8 text-dark-900"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-4">Barber Shop</h3>
+                        <ul class="space-y-3 text-gray-400 mb-6">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Precision Haircuts</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Hot Towel Shaves</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Beard Grooming & Trim</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Hair Coloring</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-700">
+                            <span class="text-gold-400 font-bold text-lg">From KES 500</span>
+                            <button class="text-white hover:text-gold-400 transition-colors flex items-center gap-1 text-sm font-semibold">
+                                Book Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salon Services -->
+                <div class="service-card bg-dark-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500 transition-all duration-300 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="http://static.photos/salon/640x480/55" alt="Salon Services" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="service-icon w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mb-6 -mt-16 relative z-10 border-4 border-dark-800">
+                            <i data-lucide="sparkles" class="w-8 h-8 text-dark-900"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-4">Hair Salon</h3>
+                        <ul class="space-y-3 text-gray-400 mb-6">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Styling & Blow Dry</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Hair Treatment</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Loc Maintenance</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Braiding & Twists</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-700">
+                            <span class="text-gold-400 font-bold text-lg">From KES 800</span>
+                            <button class="text-white hover:text-gold-400 transition-colors flex items-center gap-1 text-sm font-semibold">
+                                Book Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spa Services -->
+                <div class="service-card bg-dark-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500 transition-all duration-300 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="http://static.photos/spa/640x480/77" alt="Spa Services" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="service-icon w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mb-6 -mt-16 relative z-10 border-4 border-dark-800">
+                            <i data-lucide="heart" class="w-8 h-8 text-dark-900"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-4">Wellness Spa</h3>
+                        <ul class="space-y-3 text-gray-400 mb-6">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Deep Tissue Massage</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Facial Treatments</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Manicure & Pedicure</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="minus" class="w-4 h-4 text-gold-400"></i>
+                                <span>Steam Therapy</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-700">
+                            <span class="text-gold-400 font-bold text-lg">From KES 1,500</span>
+                            <button class="text-white hover:text-gold-400 transition-colors flex items-center gap-1 text-sm font-semibold">
+                                Book Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-dark-800 clip-path-slant">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <i data-lucide="map-pin" class="w-12 h-12 text-gold-400 mx-auto mb-4"></i>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">Prime Location</h3>
+                    <p class="text-gray-400 text-sm">Gigiri Box Park, UN Crescent - convenient for diplomats & professionals</p>
+                </div>
+                <div class="p-6">
+                    <i data-lucide="clock" class="w-12 h-12 text-gold-400 mx-auto mb-4"></i>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">Flexible Hours</h3>
+                    <p class="text-gray-400 text-sm">Open 7 days a week to accommodate your busy schedule</p>
+                </div>
+                <div class="p-6">
+                    <i data-lucide="award" class="w-12 h-12 text-gold-400 mx-auto mb-4"></i>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">Expert Staff</h3>
+                    <p class="text-gray-400 text-sm">Internationally trained barbers and certified spa therapists</p>
+                </div>
+                <div class="p-6">
+                    <i data-lucide="coffee" class="w-12 h-12 text-gold-400 mx-auto mb-4"></i>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">Premium Experience</h3>
+                    <p class="text-gray-400 text-sm">Complimentary beverages and relaxing atmosphere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-gold-400 uppercase tracking-widest text-sm mb-2">Portfolio</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white">Our Work</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative group overflow-hidden rounded-lg aspect-square">
+                    <img src="http://static.photos/barber/400x400/11" alt="Haircut style" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg aspect-square">
+                    <img src="http://static.photos/barber/400x400/22" alt="Beard trim" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg aspect-square">
+                    <img src="http://static.photos/salon/400x400/33" alt="Hair treatment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg aspect-square">
+                    <img src="http://static.photos/spa/400x400/44" alt="Spa treatment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg aspect-square">
+                    <img src="http://static.photos/barber/400x400/55" alt="Style" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg aspect-square">
+                    <img src="http://static.photos/salon/400x400/66" alt="Color" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg aspect-square">
+                    <img src="http://static.photos/spa/400x400/77" alt="Massage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg aspect-square">
+                    <img src="http://static.photos/barber/400x400/88" alt="Final look" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <p class="text-gold-400 uppercase tracking-widest text-sm mb-2">Get In Touch</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Visit Us Today</h2>
+                    <p class="text-gray-400 text-lg mb-8">
+                        Experience premium grooming and relaxation at our Gigiri location. Walk-ins welcome, appointments recommended.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-dark-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Location</h4>
+                                <p class="text-gray-400">Gigiri Box Park<br>United Nations Crescent<br>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6 text-dark-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Phone</h4>
+                                <p class="text-gray-400 text-2xl font-serif">0789 645 636</p>
+                                <p class="text-sm text-gray-500">Call or WhatsApp</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-dark-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Opening Hours</h4>
+                                <div class="text-gray-400 space-y-1">
+                                    <p>Monday - Friday: 7:00 AM - 8:00 PM</p>
+                                    <p>Saturday: 9:00 AM - 7:00 PM</p>
+                                    <p>Sunday: 10:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="mt-8 flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-dark-700 rounded-full flex items-center justify-center text-gray-400 hover:bg-gold-500 hover:text-dark-900 transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-dark-700 rounded-full flex items-center justify-center text-gray-400 hover:bg-gold-500 hover:text-dark-900 transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-dark-700 rounded-full flex items-center justify-center text-gray-400 hover:bg-gold-500 hover:text-dark-900 transition-all">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Contact Form -->
+                <div class="bg-dark-900 p-8 rounded-2xl border border-gray-800">
+                    <h3 class="font-serif text-2xl font-bold text-white mb-6">Book an Appointment</h3>
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly to confirm your appointment.');">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-1">First Name</label>
+                                <input type="text" class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="John" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-1">Last Name</label>
+                                <input type="text" class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1">Phone Number</label>
+                            <input type="tel" class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors" placeholder="07XX XXX XXX" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1">Service</label>
+                            <select class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors">
+                                <option>Barber Services</option>
+                                <option>Salon Services</option>
+                                <option>Spa Treatment</option>
+                                <option>Full Package</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1">Preferred Date</label>
+                            <input type="date" class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1">Message (Optional)</label>
+                            <textarea rows="3" class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-800 transition-colors" placeholder="Any specific requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gold-500 text-dark-900 font-bold py-4 rounded-lg hover:bg-gold-400 transition-all transform hover:scale-[1.02]">
+                            Request Booking
+                        </button>
+                        
+                        <p class="text-center text-sm text-gray-500 mt-4">
+                            Or call us directly at <a href="tel:0789645636" class="text-gold-400 hover:underline">0789 645 636</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="h-96 bg-dark-900 relative">
+        <div class="absolute inset-0 bg-dark-800">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.916058886145!2d36.8125!3d-1.2295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d0e9c81b9b%3A0x4a3f1f9e7d8e5c7f!2sGigiri%20Box%20Park!5e0!3m2!1sen!2ske!4v1234567890" 
+                width="100%" 
+                height="100%" 
+                style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark-900 to-transparent h-32"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center">
+                            <i data-lucide="scissors" class="text-dark-900 w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-white">YANKEE CLIPPERS</h3>
+                            <p class="text-xs text-gold-400">Barbershop & Spa</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-sm">
+                        Premium grooming and wellness destination in the heart of Gigiri. Where style meets sophistication.
+                    </p>
+                    <div class="flex items-center gap-2 text-gold-400 font-bold text-xl">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        0789 645 636
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-gold-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-gold-400 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-gold-400 transition-colors">Services</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-gold-400 transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-gold-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-sm">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-gold-400 transition-colors">Haircuts</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-gold-400 transition-colors">Beard Grooming</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-gold-400 transition-colors">Hair Styling</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-gold-400 transition-colors">Spa Treatments</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-gold-400 transition-colors">Massage Therapy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2024 Yankee Clippers Barbershop & Spa. All rights reserved.
+                </p>
+                <p class="text-gray-500 text-sm">
+                    Gigiri Box Park, United Nations Crescent, Nairobi
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254789645636" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center gap-2 group">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap font-semibold">Chat with us</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.add('bg-opacity-95');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.service-card, .relative.group').forEach((el) => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
